@@ -13203,7 +13203,7 @@ a.anchor-link {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Ames-housing"><em>Ames housing</em><a class="anchor-link" href="#Ames-housing">&#182;</a></h1><hr>
-<p>Prediçao do preço de vendas de casas em Ames, Iowa - EUA.</p>
+<p>Predição do preço de vendas de casas em Ames, Iowa - EUA.</p>
 
 </div>
 </div>
@@ -14108,7 +14108,7 @@ $$
 </div></div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="prompt input_prompt">In&nbsp;[47]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">Y</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;SalePrice&#39;</span><span class="p">]</span>
@@ -14116,6 +14116,8 @@ $$
 
 <span class="n">model</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">OLS</span><span class="p">(</span><span class="n">Y</span><span class="p">,</span> <span class="n">X</span><span class="p">)</span>
 <span class="n">results</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+
+
 
 <span class="n">results</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span>
 </pre></div>
@@ -14130,7 +14132,7 @@ $$
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[23]:</div>
+    <div class="prompt output_prompt">Out[47]:</div>
 
 
 
@@ -14150,7 +14152,7 @@ $$
   <th>Date:</th>             <td>Sun, 06 Mar 2022</td> <th>  Prob (F-statistic):</th> <td>1.72e-315</td>
 </tr>
 <tr>
-  <th>Time:</th>                 <td>11:05:46</td>     <th>  Log-Likelihood:    </th> <td>  386.56</td> 
+  <th>Time:</th>                 <td>14:34:07</td>     <th>  Log-Likelihood:    </th> <td>  386.56</td> 
 </tr>
 <tr>
   <th>No. Observations:</th>      <td>   955</td>      <th>  AIC:               </th> <td>  -763.1</td> 
@@ -14469,7 +14471,7 @@ dtype: float64</pre>
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[36]:</div>
+<div class="prompt input_prompt">In&nbsp;[48]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">error</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;SalePrice&#39;</span><span class="p">])</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">results</span><span class="o">.</span><span class="n">fittedvalues</span><span class="p">))</span>
@@ -14497,8 +14499,8 @@ dtype: float64</pre>
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>MAPE = 	12.335%
-MAE = 	23007.6291
-MSE = 	1138121550.1957
+MAE  = 	23007.6291
+MSE  = 	1138121550.1957
 RMSE = 	33736.0571
 </pre>
 </div>
